@@ -1,0 +1,23 @@
+
+
+<div class="formulario">
+  <h1>Hazte socio!</h1>
+</div>
+
+    <section class="formList">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <label for="name">Nombre:</label>
+      <input type="text" formControlName="name">
+
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email">
+
+     <label type="button">Contraseña:</label>
+      <input type="password" formControlName="password">
+
+     <label type="button">Repita la contraseña:</label>
+     <input type="password" formControlName="passwordRepeat">
+
+     <button type="submit">Enviar</button>
+   </form> 
+  </section>

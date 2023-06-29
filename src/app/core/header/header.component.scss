@@ -1,0 +1,24 @@
+.header{
+    width: 100%;
+    background-color: pink;
+    color: palevioletred;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+a{
+    margin-right: 30px;
+    text-size-adjust: 150%;
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
+}
