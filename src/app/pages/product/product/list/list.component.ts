@@ -11,25 +11,15 @@ import { ProductInterface } from 'src/app/core/models/items';
 export class ListComponent implements OnInit{
 
  //productList: ProductInterface[]=[];
-  productItem!: ProductInterface;  //para almacenar los datos de un producto
+  productItem: ProductInterface[]=[];  //para almacenar los datos de un producto
 
   
   constructor(
-    private route: ActivatedRoute, private productService: ProductService) { }
+    private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe (params =>{ //Se suscribe a los cambios de los parámetros de la ruta
-      //console.log(params['id']);
-      this.getItemDetail(params['id']);
-      
-    })
-  }
-
-  public getItemDetail(id: string) {
-    this.productService.getItemDetail(id).subscribe((item: ProductInterface[]) => {
-      //console.log(item);
-      this.productItem= item[0];   //A través del param id usa ProductService para conseguir los id y los almacena en productItem
-      console.log(this.productItem);
+    this.productService.getProducts().subscribe((data: ProductInterface[]) => {
+      this.productItem = data;
     });
   }
 }

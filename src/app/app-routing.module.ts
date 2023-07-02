@@ -1,6 +1,7 @@
+import { ListModule } from './pages/product/product/list/list.module';
 import { FormsModule } from '@angular/forms';
 import { FormModule } from './pages/form/form.module';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/product/product.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'product',
     loadChildren: () => import('./pages/product/product.module').then(m => m.ProductModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/product/product/list/list.module').then(m => m.ListModule)
   },
   {
     path: 'form',

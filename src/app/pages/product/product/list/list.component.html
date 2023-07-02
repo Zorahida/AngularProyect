@@ -1,8 +1,9 @@
 <p>list works!</p>
 
-<div>
-    <h4>{{ productItem.name }}</h4>
-    <img [src]= "productItem.image" [alt]="productItem.name"/>
-<p>{{ productItem.price }}</p>
+<div *ngFor="let product of productItem">
+    <h4>{{ product.name }}</h4>
+    <img [src]= "product.image" [alt]="product.name"/>
+<p>{{ product.price }}</p>
 </div>
+
 
