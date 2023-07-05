@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 
 export class AppComponent implements OnInit {
-  title = 'proyecto2';
+  title = 'Tienda online'
   form!: FormGroup
 
   constructor(public formBuilder: FormBuilder) { }

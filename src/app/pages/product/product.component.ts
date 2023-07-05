@@ -26,7 +26,7 @@ ngOnInit(): void {
 private getProduct(){
   this.productService.getProducts().subscribe((data: ProductInterface[]) =>{
   this.productList= data})
-  console.log(this.productList);
+  //console.log(this.productList);
 }
 }
 
